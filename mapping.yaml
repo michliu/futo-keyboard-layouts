@@ -921,9 +921,11 @@ languages:
   zh:
     - zh_qwerty
     - zh_stroke
+    - zh_bopomofo
   zh_Hant:
     - zh_qwerty
     - zh_stroke
+    - zh_bopomofo
   zu:
     - qwerty
     - qwertz

@@ -1,0 +1,21 @@
+name: Chinese Zhuyin (注音)
+languages: zh
+description: Standard (大千式) Zhuyin keyboard. Tone 1 is entered with the space bar.
+attributes: {moreKeyMode: OnlyExplicit}
+autoShift: false
+imeHint: "bopomofo"
+rows:
+  - letters: ['ㄅ', 'ㄉ', 'ˇ', 'ˋ', 'ㄓ', 'ˊ', '˙', 'ㄚ', 'ㄞ', 'ㄢ', 'ㄦ']
+  - letters: ['ㄆ', 'ㄊ', 'ㄍ', 'ㄐ', 'ㄔ', 'ㄗ', 'ㄧ', 'ㄛ', 'ㄟ', 'ㄣ']
+  - letters: ['ㄇ', 'ㄋ', 'ㄎ', 'ㄑ', 'ㄕ', 'ㄘ', 'ㄨ', 'ㄜ', 'ㄠ', 'ㄤ']
+  - letters: ['ㄈ', 'ㄌ', 'ㄏ', 'ㄒ', 'ㄖ', 'ㄙ', 'ㄩ', 'ㄝ', 'ㄡ', 'ㄥ', $delete]
+  - bottom:
+    - $symbols
+    - ['，']
+    - $action
+    - $space
+    - type: base
+      spec: '。'
+      moreKeys: ['…|……', '？', '！', '；', '：', '—|——']
+      attributes: { moreKeyMode: OnlyExplicit }
+    - $enter
