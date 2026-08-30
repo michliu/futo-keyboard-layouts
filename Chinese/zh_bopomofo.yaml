@@ -27,6 +27,7 @@ subKeyboards:
   # English page, entered with the 英 key (code -20); 中 (code -19) returns to Zhuyin.
   # Keys here output ASCII, which the IME commits directly without going through Rime.
   Alphabet1:
+    attributes: { moreKeyMode: All }
     rows:
       - letters: q w e r t y u i o p
       - letters: a s d f g h j k l

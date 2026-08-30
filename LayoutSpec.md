@@ -420,7 +420,7 @@ Valid values for Japanese are "12key" or "qwerty" to specify how the keys should
 
 Valid values for Chinese are "stroke", "qwerty" or "bopomofo" to specify which schema should be used. With "bopomofo", keys output Zhuyin symbols (ㄅ, ㄆ, ˊ, ˇ...) directly and the IME maps them to the standard (大千式) keyboard for Rime.
 
-A "bopomofo" layout may provide an English page via `subKeyboards.Alphabet1` (switch with a key using `code: -20`, return with `code: -19`); ASCII characters typed there are committed directly by the IME.
+A "bopomofo" layout may provide an English page as the sticky sub-keyboard `subKeyboards.Alphabet1` (enter it with a key using `code: -20`, return with `code: -19`, as the Japanese flick layout does for its ABC page). While that sub-keyboard is active the IME commits every key as plain text; on the other pages ASCII letters, digits and the Zhuyin speller punctuation (`, . ; / -`) are committed directly instead of being sent to Rime.
 
 When the imeHint is not qwerty, the key codes are remapped to something else. For example, "1" will type "あ" in 12key Japanese, and "a" will type "き", despite no phonetic relation between these letters. Whereas in Chinese, "h" types "一" in stroke input. You will need to heavily reference these layouts if you want to use a non-qwerty imeHint:
 * [Chinese stroke](https://github.com/futo-org/futo-keyboard-layouts/blob/main/Chinese/zh_stroke.yaml)
