@@ -11,6 +11,10 @@ rows:
   - letters: ['ㄈ', 'ㄌ', 'ㄏ', 'ㄒ', 'ㄖ', 'ㄙ', 'ㄩ', 'ㄝ', 'ㄡ', 'ㄥ', $delete]
   - bottom:
     - $symbols
+    - type: base
+      spec: "英|_"
+      code: -20
+      attributes: { style: Functional }
     - ['，']
     - $action
     - $space
@@ -19,3 +23,24 @@ rows:
       moreKeys: ['…|……', '？', '！', '；', '：', '—|——']
       attributes: { moreKeyMode: OnlyExplicit }
     - $enter
+subKeyboards:
+  # English page, entered with the 英 key (code -20); 中 (code -19) returns to Zhuyin.
+  # Keys here output ASCII, which the IME commits directly without going through Rime.
+  Alphabet1:
+    rows:
+      - letters: q w e r t y u i o p
+      - letters: a s d f g h j k l
+      - letters: [$shift, z, x, c, v, b, n, m, $delete]
+      - bottom:
+        - $symbols
+        - type: base
+          spec: "中|_"
+          code: -19
+          attributes: { style: Functional }
+        - $action
+        - $space
+        - type: base
+          spec: '.'
+          moreKeys: [',', '?', '!', "'"]
+          attributes: { moreKeyMode: OnlyExplicit }
+        - $enter
